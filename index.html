@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="tictactoe.css">
+  
+
+</head>
+<body>
+   
+
+    
+    <div class="container-main" style="display:none;" id="mainGame">
+      <h1>Tic Tac Toe</h1>
+      <div class="playerboard">
+        <div class="rowp">
+          <div class="cellp" id="playerOneName"></div>
+          <div class="cellp" id="mainScore">:</div>
+          <div class="cellp" id="playerTwoName"></div>
+        </div>
+        <div class="rowg">
+          <div class="cellg" id="gameStatus"></div>
+        </div>
+
+    
+      </div>
+      <div id="game-board">
+        <div class="row">
+          <div class="col col-lg-2 cell" onclick="makeMove(0, 0)" id="firstBox" style="border-left: 0; border-top: 0"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(0, 1)" id="secondBox" style="border-top: 0"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(0, 2)" id="thirdBox" style="border-top: 0; border-right: 0"></div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-2 cell" onclick="makeMove(1, 0)" id="fourthBox" style="border-left: 0"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(1, 1)" id="fifthBox"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(1, 2)" id="sixthBox" style="border-right: 0"></div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-2 cell" onclick="makeMove(2, 0)" id="seventhBox" style="border-left: 0; border-bottom: 0"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(2, 1)" id="eighthBox" style="border-bottom: 0"></div>
+          <div class="col col-lg-2 cell" onclick="makeMove(2, 2)" id="ninthBox" style="border-right: 0; border-bottom: 0"></div>
+        </div>
+      </div>
+      <button onclick="home()">Back</button>
+      <button onclick="reset()">Reset</button>
+
+    </div>
+
+    <div class="container" id="submitForm" style="display:block;"> 
+      <div class="form">
+        <div class="container">
+          <h2>Tic Tac Toe</h2>
+          
+          <input type="text" placeholder="Player One" name="uname" required id="playerOneNameInput">
+      
+        
+          <input type="text" placeholder="PlayerTwo" name="psw" required id="playerTwoNameInput">
+              
+          <div class="container-btn">
+            <button type="submit" onclick="submitNames ()">Start the Game</button>
+          </div>
+        
+        </div>
+      </div>
+
+
+
+
+    </div>
+   
+    <script src="tictactoe.js"></script>
+</body>
+</html>
